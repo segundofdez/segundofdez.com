@@ -1,0 +1,41 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: @color-main;
+    background-color: @color-alt-light;
+    h1 {
+        .font-size(21);
+        font-weight: 400;
+        @media (min-width: @screen-s) {
+            .font-size(24);
+            line-height: 1.65em;
+        }
+    }
+    p {
+        .font-size(15);
+        line-height: 1.45em;
+        font-weight: 300;
+        @media (min-width: @screen-s) {
+            .font-size(18);
+            line-height: 1.55em;
+        }
+    }
+    a {
+        color: @color-main;
+        text-decoration: none;
+        border-bottom: 1px solid @color-main;
+        padding-bottom: .05em;
+        &:hover {
+            color: @color-main-dark;
+        }
+    }
+}
+
+.page {
+    &:extend(.wrapper-narrow);
+}

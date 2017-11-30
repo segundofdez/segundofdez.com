@@ -1,0 +1,38 @@
+{
+  "name": "reticulas-template",
+  "description": "Simple static site generator",
+  "version": "0.5.0",
+  "scripts": {
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segundofdez/reticulas-template"
+  },
+  "keywords": [
+    "reticulas",
+    "less",
+    "css",
+    "webpack",
+    "template"
+  ],
+  "author": {
+    "name": "Segundo Fdez | Sond3",
+    "url": "http://segundofdez.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/segundofdez/reticulas-template",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "imagemin-webpack-plugin": "^1.5.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "imagemin-mozjpeg": "^6.0.0",
+    "jquery": "^3.2.1",
+    "laravel-mix": "^1.4.5",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "normalize.css": "7.0.0"
+  }
+}

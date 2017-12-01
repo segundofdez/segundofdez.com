@@ -49,8 +49,8 @@ body {
 
 .logo {
     transition: ease-in-out .75s all;
-    width: 70px;
-    height: 70px;
+    width: 71px;
+    height: 71px;
     margin-top: 1em;
     .logo-back {
         transition: ease-in-out 1s all;
@@ -64,7 +64,7 @@ body {
     .logo-line {
         fill: @color-alt-light;
         width: 40px;
-        animation: logoline 2.25s ease forwards;
+        animation: logoline 2.15s ease forwards;
     }
     .logo-sup {
         animation: logosup 2.25s ease forwards;
@@ -130,7 +130,11 @@ body {
     30% {
         opacity: 1;
     }
-    90% {
+    75% {
+        transform: translate(-4px, 4px);
+    }
+
+    80% {
         transform: translate(-4px, 4px);
     }
     100% {
@@ -148,6 +152,9 @@ body {
     }
     30% {
         opacity: 1;
+    }
+    75% {
+        transform: translate(4px, -5px);
     }
     90% {
         transform: translate(4px, -5px);

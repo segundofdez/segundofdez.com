@@ -558,8 +558,8 @@ body a:hover {
 .logo {
   -webkit-transition: ease-in-out 0.75s all;
   transition: ease-in-out 0.75s all;
-  width: 70px;
-  height: 70px;
+  width: 71px;
+  height: 71px;
   margin-top: 1em;
 }
 .logo .logo-back {
@@ -576,8 +576,8 @@ body a:hover {
 .logo .logo-line {
   fill: #b0f9c5;
   width: 40px;
-  -webkit-animation: logoline 2.25s ease forwards;
-          animation: logoline 2.25s ease forwards;
+  -webkit-animation: logoline 2.15s ease forwards;
+          animation: logoline 2.15s ease forwards;
 }
 .logo .logo-sup {
   -webkit-animation: logosup 2.25s ease forwards;
@@ -695,7 +695,11 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  90% {
+  75% {
+    -webkit-transform: translate(-4px, 4px);
+            transform: translate(-4px, 4px);
+  }
+  80% {
     -webkit-transform: translate(-4px, 4px);
             transform: translate(-4px, 4px);
   }
@@ -716,7 +720,11 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  90% {
+  75% {
+    -webkit-transform: translate(-4px, 4px);
+            transform: translate(-4px, 4px);
+  }
+  80% {
     -webkit-transform: translate(-4px, 4px);
             transform: translate(-4px, 4px);
   }
@@ -736,6 +744,10 @@ body a:hover {
   }
   30% {
     opacity: 1;
+  }
+  75% {
+    -webkit-transform: translate(4px, -5px);
+            transform: translate(4px, -5px);
   }
   90% {
     -webkit-transform: translate(4px, -5px);
@@ -757,6 +769,10 @@ body a:hover {
   }
   30% {
     opacity: 1;
+  }
+  75% {
+    -webkit-transform: translate(4px, -5px);
+            transform: translate(4px, -5px);
   }
   90% {
     -webkit-transform: translate(4px, -5px);

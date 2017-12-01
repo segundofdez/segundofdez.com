@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background: white;
+}
+
 body {
     font-family: 'Heebo', sans-serif;
     color: @color-main;
@@ -31,11 +35,124 @@ body {
         border-bottom: 1px solid @color-main;
         padding-bottom: .05em;
         &:hover {
-            color: @color-main-dark;
+            color: blue;
+            border-bottom-color: blue;
         }
     }
 }
 
 .page {
     &:extend(.wrapper-narrow);
+}
+
+
+
+.logo {
+    transition: ease-in-out .75s all;
+    width: 70px;
+    height: 70px;
+    margin-top: 1em;
+    .logo-back {
+        transition: ease-in-out 1s all;
+        fill: @color-main;
+        animation: logoback 2.25s ease forwards;
+    }
+    .logo-sup,
+    .logo-sub {
+        fill: @color-alt-light;
+    }
+    .logo-line {
+        fill: @color-alt-light;
+        width: 40px;
+        animation: logoline 2.25s ease forwards;
+    }
+    .logo-sup {
+        animation: logosup 2.25s ease forwards;
+    }
+    .logo-sub {
+        animation: logosub 2.25s ease forwards;
+    }
+    &:hover {
+        transform: rotate(180deg);
+    }
+    @media (min-width: @screen-m) {
+        width: 100px;
+        height: 100px;
+        transform: scale(1);
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@keyframes logoback {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoline {
+    0% {
+        transform: rotate(0deg) scale(0);
+        transform-origin: 50% 50%;
+    }
+    35% {
+        transform: rotate(0deg) scale(0);
+        transform-origin: 50% 50%;
+    }
+    45% {
+        transform: rotate(0deg) scale(1);
+        transform-origin: 50% 50%;
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes logosup {
+    0% {
+        transform: translate(-4px, 4px);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-4px, 4px);
+    }
+    100% {
+        transform: translate(0px, 1px);
+    }
+}
+
+@keyframes logosub {
+    0% {
+        transform: translate(4px, -5px);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    90% {
+        transform: translate(4px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }

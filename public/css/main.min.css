@@ -517,18 +517,16 @@ template {
 }
 body {
   font-family: 'Heebo', sans-serif;
-  color: #003399;
-  background-color: #b0f9c5;
+  color: #284E93;
+  background-color: #f7f2f1;
 }
 body h1 {
   font-size: 21px;
   font-size: 1.3125rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 @media (min-width: 480px) {
   body h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
     line-height: 1.65em;
   }
 }
@@ -536,7 +534,7 @@ body p {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.45em;
-  font-weight: 300;
+  font-weight: 400;
 }
 @media (min-width: 480px) {
   body p {
@@ -546,14 +544,50 @@ body p {
   }
 }
 body a {
-  color: #003399;
+  color: #284E93;
   text-decoration: none;
-  border-bottom: 1px solid #003399;
+  border-bottom: 1px solid #284E93;
   padding-bottom: .05em;
+  -webkit-transition: ease-in-out border-bottom-width 0.1s;
+  transition: ease-in-out border-bottom-width 0.1s;
 }
 body a:hover {
-  color: blue;
-  border-bottom-color: blue;
+  border-bottom-width: 3px;
+}
+.page {
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 960px;
+}
+@media (min-width: 480px) {
+  .page {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+@media (min-width: 800px) {
+  .page {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1em .5fr 1fr 1em;
+    grid-template-rows: 90px 70px auto;
+    grid-gap-column: 50px;
+  }
+  .logo,
+  .page-header,
+  .page-lang {
+    grid-column: 2;
+  }
+  .page-main,
+  .page-footer {
+    grid-column: 3;
+  }
+  .page-main {
+    grid-row: 3;
+  }
+  .page-main p {
+    margin-top: 0;
+  }
 }
 .logo {
   -webkit-transition: ease-in-out 0.75s all;
@@ -565,16 +599,16 @@ body a:hover {
 .logo .logo-back {
   -webkit-transition: ease-in-out 1s all;
   transition: ease-in-out 1s all;
-  fill: #003399;
+  fill: #284E93;
   -webkit-animation: logoback 2.25s ease forwards;
           animation: logoback 2.25s ease forwards;
 }
 .logo .logo-sup,
 .logo .logo-sub {
-  fill: #b0f9c5;
+  fill: #f7f2f1;
 }
 .logo .logo-line {
-  fill: #b0f9c5;
+  fill: #f7f2f1;
   width: 40px;
   -webkit-animation: logoline 2.15s ease forwards;
           animation: logoline 2.15s ease forwards;
@@ -593,8 +627,8 @@ body a:hover {
 }
 @media (min-width: 800px) {
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 82px;
+    height: 82px;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -695,13 +729,13 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  75% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
-  }
   80% {
     -webkit-transform: translate(-4px, 4px);
             transform: translate(-4px, 4px);
+  }
+  90% {
+    -webkit-transform: translate(0px, 1px);
+            transform: translate(0px, 1px);
   }
   100% {
     -webkit-transform: translate(0px, 1px);
@@ -720,13 +754,13 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  75% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
-  }
   80% {
     -webkit-transform: translate(-4px, 4px);
             transform: translate(-4px, 4px);
+  }
+  90% {
+    -webkit-transform: translate(0px, 1px);
+            transform: translate(0px, 1px);
   }
   100% {
     -webkit-transform: translate(0px, 1px);
@@ -745,13 +779,13 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  75% {
+  80% {
     -webkit-transform: translate(4px, -5px);
             transform: translate(4px, -5px);
   }
   90% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
     -webkit-transform: translate(0px, 0px);
@@ -770,13 +804,13 @@ body a:hover {
   30% {
     opacity: 1;
   }
-  75% {
+  80% {
     -webkit-transform: translate(4px, -5px);
             transform: translate(4px, -5px);
   }
   90% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
     -webkit-transform: translate(0px, 0px);
@@ -799,8 +833,7 @@ body a:hover {
  * }
  */
 .wrapper,
-.wrapper-narrow,
-.page {
+.wrapper-narrow {
   display: block;
   width: 100%;
   padding-left: 1rem;
@@ -809,39 +842,34 @@ body a:hover {
 }
 @media (min-width: 480px) {
   .wrapper,
-  .wrapper-narrow,
-  .page {
+  .wrapper-narrow {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 @media (min-width: 800px) {
   .wrapper,
-  .wrapper-narrow,
-  .page {
+  .wrapper-narrow {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 }
 @media (min-width: 1024px) {
   .wrapper,
-  .wrapper-narrow,
-  .page {
+  .wrapper-narrow {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 @media (min-width: 1440px) {
   .wrapper,
-  .wrapper-narrow,
-  .page {
+  .wrapper-narrow {
     padding-left: 6rem;
     padding-right: 6rem;
   }
 }
 @media (min-width: 320px) {
-  .wrapper-narrow,
-  .page {
+  .wrapper-narrow {
     max-width: 780px;
   }
 }
@@ -865,18 +893,18 @@ body a:hover {
   }
 }
 .page-lang a {
-  margin-right: .75em;
+  margin-right: 1em;
 }
 .page-lang a:last-child {
   margin-right: 0;
 }
-.footer {
-  padding-top: 3em;
-  padding-bottom: 6em;
+.page-footer {
+  padding-top: 2em;
+  padding-bottom: 4em;
 }
-.footer a {
-  margin-right: .75em;
+.page-footer a {
+  margin-right: 1em;
 }
-.footer a:last-child {
+.page-footer a:last-child {
   margin-right: 0;
 }

@@ -3,28 +3,16 @@
    ========================================================================== */
 
 /**
- * Users common page.
+ * Home page.
  */
 
-.page-lang {
-    margin-bottom: 3em;
-    .font-size(14);
-    @media (min-width: @screen-s) {
-        .font-size(16);
-    }
-    a {
-        margin-right: 1em;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
+.page-lang,
 .page-footer {
-    padding-top: 2em;
-    padding-bottom: 4em;
+    .font-size(13);
     a {
-        margin-right: 1em;
+        color: darken(@color-alt, 25%);
+        margin-right: .75em;
+        border-bottom-color: darken(@color-alt, 25%);
         &:last-child {
             margin-right: 0;
         }

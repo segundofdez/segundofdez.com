@@ -472,11 +472,11 @@ template {
 /* Paths
    ========================================================================== */
 /**
- * Generic path to static on Scms-site
+ * Generic path to images folder
  *
  * Example LESS:
  *
- * background-image: url("@{path-site}/img/site.jpg");
+ * background-image: url("@{path-site}/site.jpg");
  */
 /* Mixins
    ========================================================================== */
@@ -510,96 +510,107 @@ template {
           box-sizing: border-box;
 }
 ::-moz-selection {
-  background: white;
+  background: #e9dddb;
 }
 ::selection {
-  background: white;
+  background: #e9dddb;
 }
 body {
   font-family: 'Heebo', sans-serif;
-  color: #284E93;
+  color: #0a4ba7;
   background-color: #f7f2f1;
 }
-body h1 {
-  font-size: 21px;
-  font-size: 1.3125rem;
+h1 {
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
+  margin-top: .5em;
 }
-@media (min-width: 480px) {
-  body h1 {
-    line-height: 1.65em;
-  }
-}
-body p {
-  font-size: 15px;
-  font-size: 0.9375rem;
-  line-height: 1.45em;
+p {
   font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4em;
 }
 @media (min-width: 480px) {
-  body p {
-    font-size: 18px;
-    font-size: 1.125rem;
-    line-height: 1.55em;
+  p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5em;
   }
 }
-body a {
-  color: #284E93;
+a {
+  color: #0a4ba7;
   text-decoration: none;
-  border-bottom: 1px solid #284E93;
+  border-bottom: 1px solid #0a4ba7;
   padding-bottom: .05em;
-  -webkit-transition: ease-in-out border-bottom-width 0.1s;
-  transition: ease-in-out border-bottom-width 0.1s;
+  -webkit-transition: ease-in-out all 0.1s;
+  transition: ease-in-out all 0.1s;
 }
-body a:hover {
+a:hover {
   border-bottom-width: 3px;
 }
 .page {
   padding-left: 1em;
   padding-right: 1em;
-  max-width: 960px;
-}
-@media (min-width: 480px) {
-  .page {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
+  margin: 0 auto;
+  max-width: 540px;
 }
 @media (min-width: 800px) {
   .page {
-    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+.page-main {
+  margin: 3em  0;
+}
+.page-footer {
+  margin-bottom: 4em;
+}
+@media (min-width: 800px) {
+  .page {
     display: grid;
-    grid-template-columns: 1em .5fr 1fr 1em;
-    grid-template-rows: 90px 70px auto;
-    grid-gap-column: 50px;
+    grid-template-columns: 1em .5fr .75fr 1em;
+    grid-template-rows: 110px 80px auto;
+    grid-column-gap: 10px;
   }
   .logo,
-  .page-header,
-  .page-lang {
+  .page-header {
     grid-column: 2;
   }
-  .page-main,
-  .page-footer {
-    grid-column: 3;
+  .logo {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
   .page-main {
+    grid-column: 3;
     grid-row: 3;
+    margin: 0;
   }
   .page-main p {
     margin-top: 0;
+  }
+  .page-lang,
+  .page-footer {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .page-footer {
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 .logo {
   -webkit-transition: ease-in-out 0.75s all;
   transition: ease-in-out 0.75s all;
-  width: 71px;
-  height: 71px;
+  width: 63px;
+  height: 63px;
   margin-top: 1em;
 }
 .logo .logo-back {
   -webkit-transition: ease-in-out 1s all;
   transition: ease-in-out 1s all;
-  fill: #284E93;
+  fill: #0a4ba7;
   -webkit-animation: logoback 2.25s ease forwards;
           animation: logoback 2.25s ease forwards;
 }
@@ -627,8 +638,8 @@ body a:hover {
 }
 @media (min-width: 800px) {
   .logo {
-    width: 82px;
-    height: 82px;
+    width: 73px;
+    height: 73px;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -879,32 +890,20 @@ body a:hover {
    Home
    ========================================================================== */
 /**
- * Users common page.
+ * Home page.
  */
-.page-lang {
-  margin-bottom: 3em;
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-@media (min-width: 480px) {
-  .page-lang {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-}
-.page-lang a {
-  margin-right: 1em;
-}
-.page-lang a:last-child {
-  margin-right: 0;
-}
+.page-lang,
 .page-footer {
-  padding-top: 2em;
-  padding-bottom: 4em;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
+.page-lang a,
 .page-footer a {
-  margin-right: 1em;
+  color: #b9928c;
+  margin-right: .75em;
+  border-bottom-color: #b9928c;
 }
+.page-lang a:last-child,
 .page-footer a:last-child {
   margin-right: 0;
 }

@@ -446,7 +446,7 @@ template {
   display: none;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Heebo:300,400,700);/* ==========================================================================
+/* ==========================================================================
    General imports
    ========================================================================== */
 /**
@@ -499,8 +499,136 @@ template {
  *     font-size: 1rem;
  * }
  */
-/* Google font roboto
+/* Google font
    ========================================================================== */
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/kbq7FPeQCXis0Edyi-YOa1KPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/YHRUvkKfjyY1OOFvVZ97pVKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/SMyFnaT9pyH0nwH2jtNCVFKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/fxnGy8eAqq_GyLly_a7nxlKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/JdDY2pSZ0-z3fN7zaQFZ8FKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/mE8TUCo3Ct6cvn2PsTuRYVKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/vqlxvKR8WJ80oGafUBSU3lKPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cousine Regular'), local('Cousine-Regular'), url(https://fonts.gstatic.com/s/cousine/v12/2eS1tP1E7XMJQjkhdN3itQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/4OFqQVT4CccEiwAQMKv0egsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/auteuWVL5GjOhekECAkC_QsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/M4ypRnXoqtkNd9wEOy-kYwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/LTIpBDvtJwYbnunRv_7joAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* hebrew */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/SBk2sQ2c9BLDOxF66pZljwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/UlWknS0Ks8i3LQ3Np_9zgQsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/JHq2r7PZMuzGPtEvdlprZAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cousine Bold'), local('Cousine-Bold'), url(https://fonts.gstatic.com/s/cousine/v12/XkYjaL8YjqL9qW8o0T14uQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 /* Common
    ========================================================================== */
 *,
@@ -516,7 +644,7 @@ template {
   background: #e9dddb;
 }
 body {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Cousine', monospace;
   color: #0a4ba7;
   background-color: #f7f2f1;
 }
@@ -524,31 +652,27 @@ h1 {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
-  margin-top: .5em;
+  margin-top: .75em;
 }
 p {
-  font-weight: 400;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.4em;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.55em;
 }
 @media (min-width: 480px) {
   p {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5em;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6em;
   }
 }
 a {
   color: #0a4ba7;
   text-decoration: none;
   border-bottom: 1px solid #0a4ba7;
-  padding-bottom: .05em;
-  -webkit-transition: ease-in-out all 0.1s;
-  transition: ease-in-out all 0.1s;
 }
 a:hover {
-  border-bottom-width: 3px;
+  border-bottom-width: 2px;
 }
 .page {
   padding-left: 1em;
@@ -571,12 +695,12 @@ a:hover {
   .page {
     display: grid;
     grid-template-columns: 1em .5fr .75fr 1em;
-    grid-template-rows: 110px 80px auto;
+    grid-template-rows: 110px 90px auto;
     grid-column-gap: 10px;
   }
   .logo,
   .page-header {
-    grid-column: 2;
+    grid-column: 3;
   }
   .logo {
     -ms-flex-item-align: end;
@@ -595,6 +719,9 @@ a:hover {
     grid-column: 2;
     grid-row: 3;
   }
+  .page-lang {
+    margin-top: .25em;
+  }
   .page-footer {
     -ms-flex-item-align: center;
         align-self: center;
@@ -603,9 +730,11 @@ a:hover {
 .logo {
   -webkit-transition: ease-in-out 0.75s all;
   transition: ease-in-out 0.75s all;
-  width: 63px;
-  height: 63px;
+  width: 66px;
+  height: 66px;
   margin-top: 1em;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .logo .logo-back {
   -webkit-transition: ease-in-out 1s all;
@@ -620,9 +749,8 @@ a:hover {
 }
 .logo .logo-line {
   fill: #f7f2f1;
-  width: 40px;
-  -webkit-animation: logoline 2.15s ease forwards;
-          animation: logoline 2.15s ease forwards;
+  -webkit-animation: logoline 2.25s ease forwards;
+          animation: logoline 2.25s ease forwards;
 }
 .logo .logo-sup {
   -webkit-animation: logosup 2.25s ease forwards;
@@ -635,18 +763,6 @@ a:hover {
 .logo:hover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-@media (min-width: 800px) {
-  .logo {
-    width: 73px;
-    height: 73px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  .logo:hover {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
 }
 @-webkit-keyframes logoback {
   0% {
@@ -730,8 +846,8 @@ a:hover {
 }
 @-webkit-keyframes logosup {
   0% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
     opacity: 0;
   }
   20% {
@@ -740,23 +856,19 @@ a:hover {
   30% {
     opacity: 1;
   }
-  80% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
-  }
   90% {
-    -webkit-transform: translate(0px, 1px);
-            transform: translate(0px, 1px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(0px, 1px);
-            transform: translate(0px, 1px);
+    -webkit-transform: translate(3px, -3px);
+            transform: translate(3px, -3px);
   }
 }
 @keyframes logosup {
   0% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
     opacity: 0;
   }
   20% {
@@ -765,23 +877,19 @@ a:hover {
   30% {
     opacity: 1;
   }
-  80% {
-    -webkit-transform: translate(-4px, 4px);
-            transform: translate(-4px, 4px);
-  }
   90% {
-    -webkit-transform: translate(0px, 1px);
-            transform: translate(0px, 1px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(0px, 1px);
-            transform: translate(0px, 1px);
+    -webkit-transform: translate(3px, -3px);
+            transform: translate(3px, -3px);
   }
 }
 @-webkit-keyframes logosub {
   0% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
     opacity: 0;
   }
   20% {
@@ -790,23 +898,19 @@ a:hover {
   30% {
     opacity: 1;
   }
-  80% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
-  }
   90% {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    -webkit-transform: translate(-3px, 3px);
+            transform: translate(-3px, 3px);
   }
 }
 @keyframes logosub {
   0% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
     opacity: 0;
   }
   20% {
@@ -815,17 +919,13 @@ a:hover {
   30% {
     opacity: 1;
   }
-  80% {
-    -webkit-transform: translate(4px, -5px);
-            transform: translate(4px, -5px);
-  }
   90% {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    -webkit-transform: translate(-3px, 3px);
+            transform: translate(-3px, 3px);
   }
 }
 /* Layout
@@ -902,6 +1002,11 @@ a:hover {
   color: #b9928c;
   margin-right: .75em;
   border-bottom-color: #b9928c;
+}
+.page-lang a:hover,
+.page-footer a:hover {
+  color: #333;
+  border-bottom-color: #333;
 }
 .page-lang a:last-child,
 .page-footer a:last-child {

@@ -5,20 +5,19 @@
 }
 
 ::selection {
-    background:@color-alt;
+    background: darken(@color-alt, 12%);
 }
 
 body {
-    //font-family: 'Heebo', sans-serif;
     font-family: 'Cousine', monospace;
     color: @color-main;
     background-color: @color-alt-light;
 }
 
 h1 {
-    .font-size(18);
+    .font-size(16);
     font-weight: 700;
-    margin-top: .75em;
+    margin-top: 1.25em;
 }
 p {
     .font-size(13);
@@ -55,7 +54,7 @@ a {
 @media (min-width: @screen-m) {
     .page {
         display: grid;
-        grid-template-columns: 1em .5fr .75fr 1em;
+        grid-template-columns: 1em .5fr .6fr 1em;
         grid-template-rows: 110px 90px auto;
         grid-column-gap: 10px;
     }
@@ -114,7 +113,7 @@ a {
         animation: logosub 2.25s ease forwards;
     }
     &:hover {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
     }
 }
 

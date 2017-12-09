@@ -464,7 +464,7 @@ template {
  */
 /* Colors
    ========================================================================== */
-/* Font weights based on Heebo
+/* Font weights
    ========================================================================== */
 /* Media queries break points
    ========================================================================== */
@@ -638,21 +638,21 @@ template {
           box-sizing: border-box;
 }
 ::-moz-selection {
-  background: #e9dddb;
+  background: #b5cad2;
 }
 ::selection {
-  background: #e9dddb;
+  background: #b5cad2;
 }
 body {
   font-family: 'Cousine', monospace;
   color: #0a4ba7;
-  background-color: #f7f2f1;
+  background-color: #dee7eb;
 }
 h1 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  margin-top: .75em;
+  margin-top: 1.25em;
 }
 p {
   font-size: 13px;
@@ -694,7 +694,7 @@ a:hover {
 @media (min-width: 800px) {
   .page {
     display: grid;
-    grid-template-columns: 1em .5fr .75fr 1em;
+    grid-template-columns: 1em .5fr .6fr 1em;
     grid-template-rows: 110px 90px auto;
     grid-column-gap: 10px;
   }
@@ -745,10 +745,10 @@ a:hover {
 }
 .logo .logo-sup,
 .logo .logo-sub {
-  fill: #f7f2f1;
+  fill: #dee7eb;
 }
 .logo .logo-line {
-  fill: #f7f2f1;
+  fill: #dee7eb;
   -webkit-animation: logoline 2.25s ease forwards;
           animation: logoline 2.25s ease forwards;
 }
@@ -761,8 +761,8 @@ a:hover {
           animation: logosub 2.25s ease forwards;
 }
 .logo:hover {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 @-webkit-keyframes logoback {
   0% {
@@ -999,14 +999,14 @@ a:hover {
 }
 .page-lang a,
 .page-footer a {
-  color: #b9928c;
+  color: #547b8a;
   margin-right: .75em;
-  border-bottom-color: #b9928c;
+  border-bottom-color: #547b8a;
 }
 .page-lang a:hover,
 .page-footer a:hover {
-  color: #333;
-  border-bottom-color: #333;
+  color: #0a4ba7;
+  border-bottom-color: #0a4ba7;
 }
 .page-lang a:last-child,
 .page-footer a:last-child {

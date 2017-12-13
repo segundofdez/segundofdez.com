@@ -8,9 +8,11 @@
     background: darken(@color-alt, 12%);
 }
 body {
-    font-family: 'Cousine', monospace;
+    //font-family: 'Cousine', monospace;
+    font-family: sans-serif;
     background-color: @color-alt-light;
     color: @color-main;
+    letter-spacing: .02em;
     &.has-background-hover,
     &.has-background {
         background-image: url('/img/segundo-fdez.jpg');
@@ -36,16 +38,16 @@ body {
 }
 
 h1 {
-    .font-size(16);
+    .font-size(18);
     font-weight: @fw-bold;
     margin-top: 1.25em;
 }
 p {
-    .font-size(13);
-    line-height: 1.55em;
+    .font-size(14);
+    line-height: 1.45em;
     @media (min-width: @screen-s) {
-        .font-size(14);
-        line-height: 1.6em;
+        .font-size(15);
+        line-height: 1.55em;
     }
 }
 a {

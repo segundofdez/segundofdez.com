@@ -550,6 +550,16 @@ body.has-background-hover a,
 body.has-background a {
   border-bottom-color: white;
 }
+body.has-background-hover a:visited,
+body.has-background a:visited {
+  color: #8cacb9;
+  border-bottom-color: #8cacb9;
+}
+body.has-background-hover a:hover,
+body.has-background a:hover {
+  color: white;
+  border-bottom-color: white;
+}
 h1 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -573,7 +583,13 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #0a4ba7;
 }
+a:visited {
+  color: #547b8a;
+  border-bottom-color: #547b8a;
+}
 a:hover {
+  color: #0a4ba7;
+  border-bottom-color: #0a4ba7;
   border-bottom-width: 2px;
 }
 .page {

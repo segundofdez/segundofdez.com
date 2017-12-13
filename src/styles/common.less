@@ -33,6 +33,14 @@ body {
         }
         a {
             border-bottom-color: white;
+            &:visited {
+                color: @color-alt-medium;
+                border-bottom-color: @color-alt-medium;
+            }
+            &:hover {
+                color: white;
+                border-bottom-color: white;
+            }
         }
     }
 }
@@ -54,7 +62,13 @@ a {
     color: @color-main;
     text-decoration: none;
     border-bottom: 1px solid @color-main;
+    &:visited {
+        color: @color-alt-dark;
+        border-bottom-color: @color-alt-dark;
+    }
     &:hover {
+        color: @color-main;
+        border-bottom-color: @color-main;
         border-bottom-width: 2px;
     }
 }

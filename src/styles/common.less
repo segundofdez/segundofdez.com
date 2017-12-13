@@ -7,11 +7,32 @@
 ::selection {
     background: darken(@color-alt, 12%);
 }
-
 body {
     font-family: 'Cousine', monospace;
-    color: @color-main;
     background-color: @color-alt-light;
+    color: @color-main;
+    &.has-background-hover,
+    &.has-background {
+        background-image: url('/img/segundo-fdez.jpg');
+        background-size: cover;
+        .logo {
+            .logo-back {
+                fill: white;
+            }
+            .logo-sup,
+            .logo-sub,
+            .logo-line {
+                fill: @color-main;
+            }
+        }
+        h1,
+        p, a{
+            color: white;
+        }
+        a {
+            border-bottom-color: white;
+        }
+    }
 }
 
 h1 {
@@ -88,11 +109,13 @@ a {
 }
 
 .logo {
-    transition: ease-in-out .75s all;
     width: 66px;
     height: 66px;
     margin-top: 1em;
     transform: scale(1);
+    cursor: pointer;
+    border-radius: 40%;
+    transition: ease-in-out .75s all;
     .logo-back {
         transition: ease-in-out 1s all;
         fill: @color-main;
@@ -116,6 +139,8 @@ a {
         transform: rotate(-180deg);
     }
 }
+
+
 
 @keyframes logoback {
     0% {

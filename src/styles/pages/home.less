@@ -65,6 +65,9 @@
             margin-right: 0;
         }
     }
+    @media (min-width: @screen-xl) {
+        .font-size(14);
+    }
 }
 
 .page-footer {
@@ -103,15 +106,25 @@
        align-self: center;
     }
 }
-
+@media (min-width: @screen-xl) {
+    .page {
+        display: grid;
+        grid-template-columns: 1em .5fr .7fr 1em;
+        grid-template-rows: 110px 90px auto;
+        grid-column-gap: 10px;
+        max-width: 960px;
+    }
+}
 /* States for background image */
 .has-background-hover,
 .has-background {
+    min-height: 100vh;
+    background-image: url('/img/segundo-fdez.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     ::selection {
         background: darken(@color-main, 25%);
     }
-    background-image: url('/img/segundo-fdez.jpg');
-    background-size: cover;
     .logo {
         background-color: white;
         .logo-back {

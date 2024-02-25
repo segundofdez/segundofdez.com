@@ -1,0 +1,38 @@
+html {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+        &:not(:last-child)::after {
+            content: "/";
+            margin-inline: .25rem;
+        }
+    }
+}
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    &:hover {
+        color: var(--accent-color-hover);
+    }
+}
+main {
+    width: min(100%, 45ch);
+}
+main a {
+    text-decoration: underline;
+}

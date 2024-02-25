@@ -1,0 +1,57 @@
+:root {
+  --bg-color: hsl(54, 61%, 88%);
+  --fg-color: hsl(60, 2%, 31%);
+  --accent-color: var(--fg-color);
+  --accent-color-hover: var(--fg-color);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-rendering: auto;
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+}
+h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+ul li:not(:last-child)::after {
+            content: "/";
+            margin-inline: .25rem;
+        }
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+        color: var(--accent-color-hover);
+    }
+main {
+    width: min(100%, 45ch);
+}
+main a {
+    text-decoration: underline;
+}

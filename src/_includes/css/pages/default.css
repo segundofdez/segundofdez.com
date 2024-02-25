@@ -1,16 +1,16 @@
 html {
     background-color: var(--bg-color);
+}
+body {
+    --margin: 1rem;
+
+    min-height: calc(100vh - var(--margin) * 2);
+    margin: var(--margin);
     color: var(--fg-color);
     font-weight: 500;
     font-size: 1rem;
-    line-height: 150%;
+    line-height: 155%;
 }
-
-h1 {
-    font-size: 1rem;
-    font-weight: 500;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -18,7 +18,7 @@ ul {
     display: flex;
     li {
         &:not(:last-child)::after {
-            content: "/";
+            content: "—";
             margin-inline: .25rem;
         }
     }
@@ -31,8 +31,61 @@ a {
     }
 }
 main {
-    width: min(100%, 45ch);
+    a {
+        text-decoration: underline;
+    }
 }
-main a {
-    text-decoration: underline;
+
+.ly-default {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(1rem, 12rem)) 1fr;
+    column-gap: calc(var(--margin) * 3);
+    /* grid-template-rows: repeat(2, auto) 2fr; */
+    grid-template-rows: repeat(2, 2fr) auto;
+}
+
+header, main, footer {
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+header {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    /* background-color: aqua ; */
+}
+
+main {
+    grid-column: 2 / 4;
+    grid-row: 3 / -1;
+    /* background-color: orange; */
+}
+
+footer {
+    grid-column: 1 / 2;
+    grid-row: 3 / -1;
+    /* background-color: yellow; */
+}
+.title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    align-self: end;
+    margin-block: calc(var(--margin) * 8);
+}
+
+.nav {
+    grid-column: 1 / -1;
+    /* background-color: red; */
+}
+
+.description {
+    grid-column: 1 / -1;
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }

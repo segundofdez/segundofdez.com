@@ -1,6 +1,6 @@
 :root {
   --bg-color: hsl(54, 61%, 88%);
-  --fg-color: hsl(60, 2%, 31%);
+  --fg-color: hsl(60, 1%, 19%);
   --accent-color: var(--fg-color);
   --accent-color-hover: var(--fg-color);
 }

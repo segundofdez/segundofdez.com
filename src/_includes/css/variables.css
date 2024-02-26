@@ -3,4 +3,14 @@
   --fg-color: hsl(60, 1%, 19%);
   --accent-color: var(--fg-color);
   --accent-color-hover: var(--fg-color);
+
+  --margin: 1rem;
 }
+
+@custom-media --mobile (min-width: 320px);
+@custom-media --for-mobile-landscape-up (min-width: 480px);
+@custom-media --until-mobile (max-width: 600px);
+@custom-media --until-tablet (max-width: 755px);
+@custom-media --for-tablet-up (min-width: 601px);
+@custom-media --for-tablet-landscape-up (min-width: 900px);
+@custom-media --for-desktop-up (min-width: 1200px);

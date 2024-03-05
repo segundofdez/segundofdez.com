@@ -31,12 +31,32 @@ footer {
     }
 }
 
+header,
+.description,
+.projects {
+    @media (--for-mobile-landscape-up) {
+        border-inline: 1px solid #dfdbbe;
+        /* border-inline: 1px solid color-mix(
+            in hsl shorter hue,
+            var(--fg-color) 10%,
+            var(--bg-color) 0%
+        ); */
+    }
+}
+
+header,
+.description,
+.projects {
+    @media  (--for-mobile-landscape-up) {
+        padding-inline: var(--margin);
+    }
+}
+
 main {
     color: var(--fg-color);
     /* text-wrap: balance; */
     p, ul {
         font-size: 1rem;
-        font-weight: 600;
         line-height: 155%;
     }
     a {
@@ -57,6 +77,13 @@ main {
                 margin-top: 0;
             }
         }
+    }
+}
+
+.projects {
+    @media (--for-desktop-up) {
+        border: none;
+        padding: 0;
     }
 }
 

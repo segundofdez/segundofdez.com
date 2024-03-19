@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body class="ly-default">
-    {{ content }}
+    <header>
+        <h1 class="title logo">Segundo Fdez</h1>
+        <nav class="nav">
+            <ul>
+            {{ for alt of alternates }}
+                <li>
+                    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
+                    {{ alt.lang }}
+                    </a>
+                </li>
+            {{ /for }}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://twitter.com/segundo_fdez" target="_blank">X</a></li>
+            <li><a href="https://github.com/segundofdez" target="_blank">Github</a></li>
+            {{# <li><a href="https://www.reticulas.com" target="_blank">Retículas (en proceso)</a></li> #}}
+        </ul>
+    </footer>
 </body>
 </html>

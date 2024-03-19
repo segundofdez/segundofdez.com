@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 import basePath from "lume/plugins/base_path.ts";
 import postcss from "lume/plugins/postcss.ts";
 import postcssCustomMedia from "npm:postcss-custom-media@9.1.2";
+import multilanguage from "lume/plugins/multilanguage.ts";
 
 
 const site = lume({
@@ -18,6 +19,10 @@ site
             postcssCustomMedia(),
         ],
         keepDefaultPlugins: true,
+    }))
+    .use(multilanguage({
+        languages: ["gl", "es", "en"], // Available languages
+        defaultLanguage: "gl", // Optional: A prefix-free language
     })
 );
 

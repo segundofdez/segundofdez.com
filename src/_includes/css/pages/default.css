@@ -31,7 +31,6 @@ header,
 }
 
 main {
-    color: var(--fg-color);
     /* text-wrap: balance; */
     p, ul {
         font-size: var(--fs-body);

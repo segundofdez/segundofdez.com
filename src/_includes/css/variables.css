@@ -1,8 +1,12 @@
 :root {
   --bg-color: hsl(54, 61%, 88%);
-  --fg-color: hsl(60, 1%, 19%);
+  --fg-color: hsl(60, 6%, 37%);
   --accent-color: var(--fg-color);
-  --accent-color-hover: var(--fg-color);
+  --accent-color-hover: color-mix(
+    in srgb, var(--fg-color) 50%, var(--bg-color)
+  );
+
+  --fs-body: 1rem;
 
   --margin: 1rem;
 }

@@ -1,22 +1,3 @@
-html {
-    background-color: var(--bg-color);
-    font-weight: 400;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-    &:hover {
-        color: var(--accent-color-hover);
-    }
-}
-
 header,
 footer {
     ul {
@@ -35,20 +16,17 @@ header,
 .description,
 .projects {
     @media (--for-mobile-landscape-up) {
-        border-inline: 1px solid #dfdbbe;
-        /* border-inline: 1px solid color-mix(
-            in hsl shorter hue,
-            var(--fg-color) 10%,
-            var(--bg-color) 0%
-        ); */
+        padding-inline: var(--margin);
+        border-inline: 1px solid color-mix(
+            in srgb, var(--fg-color) 10%, var(--bg-color)
+        );
     }
 }
-
-header,
-.description,
-.projects {
-    @media  (--for-mobile-landscape-up) {
-        padding-inline: var(--margin);
+.nav {
+    a {
+        &[aria-current="page"] {
+            color: var(--accent-color-hover);
+        }
     }
 }
 
@@ -56,17 +34,18 @@ main {
     color: var(--fg-color);
     /* text-wrap: balance; */
     p, ul {
-        font-size: 1rem;
-        line-height: 155%;
+        font-size: var(--fs-body);
+        line-height: 165%;
     }
     a {
         text-decoration: underline;
+        text-underline-offset: .25rem;
     }
 }
 
 .title {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: var(--fs-body);
+    font-weight: 500;
     margin: 0;
 }
 

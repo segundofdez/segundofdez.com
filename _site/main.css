@@ -1,8 +1,12 @@
 :root {
   --bg-color: hsl(54, 61%, 88%);
-  --fg-color: hsl(60, 1%, 19%);
+  --fg-color: hsl(60, 6%, 37%);
   --accent-color: var(--fg-color);
-  --accent-color-hover: var(--fg-color);
+  --accent-color-hover: color-mix(
+    in srgb, var(--fg-color) 50%, var(--bg-color)
+  );
+
+  --fs-body: 1rem;
 
   --margin: 1rem;
 }
@@ -15,6 +19,9 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -25,6 +32,21 @@ html body {
     margin: 0;
     padding: 0;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+        color: var(--accent-color-hover);
+    }
 
 .ly-default {
     min-height: 100dvh;
@@ -200,26 +222,6 @@ html body {
     }
         }
 
-html {
-    background-color: var(--bg-color);
-    font-weight: 400;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-a:hover {
-        color: var(--accent-color-hover);
-    }
-
 header ul, footer ul {
         display: flex;
         flex-wrap: wrap;
@@ -235,23 +237,16 @@ header ul li:not(:first-child)::before, footer ul li:not(:first-child)::before {
 header,
 .description,
 .projects {
-        border-inline: 1px solid #dfdbbe;
-        /* border-inline: 1px solid color-mix(
-            in hsl shorter hue,
-            var(--fg-color) 10%,
-            var(--bg-color) 0%
-        ); */
-}
-    }
-
-@media  (min-width: 480px) {
-
-header,
-.description,
-.projects {
         padding-inline: var(--margin);
+        border-inline: 1px solid color-mix(
+            in srgb, var(--fg-color) 10%, var(--bg-color)
+        );
 }
     }
+
+.nav a[aria-current="page"] {
+            color: var(--accent-color-hover);
+        }
 
 main {
     color: var(--fg-color);
@@ -259,17 +254,18 @@ main {
 }
 
 main p, main ul {
-        font-size: 1rem;
-        line-height: 155%;
+        font-size: var(--fs-body);
+        line-height: 165%;
     }
 
 main a {
         text-decoration: underline;
+        text-underline-offset: .25rem;
     }
 
 .title {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: var(--fs-body);
+    font-weight: 500;
     margin: 0;
 }
 

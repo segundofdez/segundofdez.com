@@ -17,9 +17,7 @@ header,
 .projects {
     @media (--for-mobile-landscape-up) {
         padding-inline: var(--margin);
-        border-inline: 1px solid color-mix(
-            in srgb, var(--fg-color) 10%, var(--bg-color)
-        );
+        border-inline: 1px solid var(--fg-color-light)
     }
 }
 .nav {
@@ -61,7 +59,11 @@ main {
 .projects {
     @media (--for-desktop-up) {
         border: none;
-        padding: 0;
+        padding: var(--margin);
+    }
+    ul {
+    font-size: 5rem;
+
     }
 }
 

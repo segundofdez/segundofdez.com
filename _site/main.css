@@ -1,9 +1,12 @@
 :root {
   --bg-color: hsl(54, 61%, 88%);
-  --fg-color: hsl(60, 6%, 37%);
+  --fg-color: hsl(43, 16%, 43%);
+  --fg-color-light: color-mix(
+    in srgb, var(--fg-color) 15%, transparent
+  );
   --accent-color: var(--fg-color);
   --accent-color-hover: color-mix(
-    in srgb, var(--fg-color) 50%, var(--bg-color)
+    in srgb, var(--fg-color) 60%, transparent
   );
 
   --fs-body: 1rem;
@@ -214,11 +217,20 @@ a:hover {
     }
         }
 
+.ly-default .projects {
+        --ofsset: 737px;
+    }
+
 @media (min-width: 1200px) {
 
 .ly-default .projects {
-            grid-column: 5 / 7;
-            grid-row: 1 / 6;
+            /* grid-column: 5 / 7;
+            grid-row: 1 / 6; */
+            position: absolute;
+            width: calc(100% - var(--ofsset));
+            left: var(--ofsset);
+            height: 100vh;
+            top: 0;
     }
         }
 
@@ -238,9 +250,7 @@ header,
 .description,
 .projects {
         padding-inline: var(--margin);
-        border-inline: 1px solid color-mix(
-            in srgb, var(--fg-color) 10%, var(--bg-color)
-        );
+        border-inline: 1px solid var(--fg-color-light);
 }
     }
 
@@ -277,6 +287,11 @@ main a {
 
 .projects {
         border: none;
-        padding: 0;
+        padding: var(--margin);
 }
+    }
+
+.projects ul {
+    font-size: 5rem;
+
     }

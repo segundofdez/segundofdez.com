@@ -111,9 +111,15 @@
     }
 
     .projects {
+        --ofsset: 737px;
         @media (--for-desktop-up) {
-            grid-column: 5 / 7;
-            grid-row: 1 / 6;
+            /* grid-column: 5 / 7;
+            grid-row: 1 / 6; */
+            position: absolute;
+            width: calc(100% - var(--ofsset));
+            left: var(--ofsset);
+            height: 100vh;
+            top: 0;
         }
     }
 }

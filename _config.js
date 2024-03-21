@@ -3,6 +3,7 @@ import basePath from "lume/plugins/base_path.ts";
 import postcss from "lume/plugins/postcss.ts";
 import postcssCustomMedia from "npm:postcss-custom-media@9.1.2";
 import multilanguage from "lume/plugins/multilanguage.ts";
+import favicon from "lume/plugins/favicon.ts";
 
 
 const site = lume({
@@ -23,8 +24,12 @@ site
     .use(multilanguage({
         languages: ["gl", "es", "en"], // Available languages
         defaultLanguage: "gl", // Optional: A prefix-free language
+    }))
+    .use(favicon({
+        input: "/favicon.svg",
     })
 );
 
 site.use(basePath());
+
 export default site;

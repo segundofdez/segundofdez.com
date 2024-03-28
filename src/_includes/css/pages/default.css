@@ -20,11 +20,13 @@ header,
         border-inline: 1px solid var(--fg-color-light)
     }
 }
-
 .nav {
     a {
         &[aria-current="page"] {
-            color: var(--accent-color-hover);
+            color: color-mix(
+                in srgb, var(--fg-color)  40%, transparent
+            );
+            pointer-events: none;
         }
     }
 }
@@ -65,14 +67,11 @@ main {
         border: none;
         padding: var(--margin);
         .title {
-            font-size: 20rem;
+            font-size: clamp(2rem, 8vw, 20rem);
             word-wrap: break-word;
             line-height: 80%;
         }
-    }
-    ul {
-    font-size: 5rem;
-
+        /* background-color: var(--fg-color);
+        color: var(--bg-color); */
     }
 }
-

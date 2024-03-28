@@ -4,6 +4,7 @@ import postcss from "lume/plugins/postcss.ts";
 import postcssCustomMedia from "npm:postcss-custom-media@9.1.2";
 import multilanguage from "lume/plugins/multilanguage.ts";
 import favicon from "lume/plugins/favicon.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 
 
 const site = lume({
@@ -27,6 +28,9 @@ site
     }))
     .use(favicon({
         input: "/favicon.svg",
+    }))
+    .use(esbuild({
+        // Your esbuild options here
     })
 );
 

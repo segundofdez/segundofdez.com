@@ -1,6 +1,7 @@
 :root {
   --bg-color: hsl(0, 0%, 100%);
-  --fg-color: hsl(0, 0%, 10%);
+  /* --bg-color: hsl(0, 70%, 50%); */
+  --fg-color: hsl(0, 0%, 5%);
   --fg-color-light: color-mix(
     in srgb, var(--fg-color) 10%, transparent
   );

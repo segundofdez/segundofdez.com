@@ -20,6 +20,7 @@ header,
         border-inline: 1px solid var(--fg-color-light)
     }
 }
+
 .nav {
     a {
         &[aria-current="page"] {
@@ -32,7 +33,7 @@ main {
     /* text-wrap: balance; */
     p, ul {
         font-size: var(--fs-body);
-        line-height: 165%;
+        line-height: 175%;
     }
     a {
         text-decoration: underline;
@@ -44,6 +45,9 @@ main {
     font-size: var(--fs-body);
     font-weight: 500;
     margin: 0;
+}
+.logo {
+    font-size: 2rem;
 }
 
 .description {
@@ -60,6 +64,11 @@ main {
     @media (--for-desktop-up) {
         border: none;
         padding: var(--margin);
+        .title {
+            font-size: 20rem;
+            word-wrap: break-word;
+            line-height: 80%;
+        }
     }
     ul {
     font-size: 5rem;

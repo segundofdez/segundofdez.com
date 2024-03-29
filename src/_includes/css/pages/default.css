@@ -13,13 +13,14 @@ footer {
 }
 
 header,
-.description,
-.projects {
+.projects,
+.description {
     @media (--for-mobile-landscape-up) {
         padding-inline: var(--margin);
         border-inline: 1px solid var(--fg-color-light)
     }
 }
+
 .nav {
     a {
         &[aria-current="page"] {
@@ -30,9 +31,44 @@ header,
         }
     }
 }
+.theme-toggle {
+    --size: 20px;
+    background-color: var(--bg-color);
+    border: none;
+    outline: 1px solid var(--fg-color);
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: outline 125ms;
+    @media (--for-mobile-landscape-up) {
+        position: absolute;
+        left: calc(var(--margin) + var(--ly-gap));
+        top: var(--margin);
+    }
+    &:hover {
+        outline: 7px solid var(--fg-color);
+    }
+    &[datha-theme="dark"] {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+    &::before {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        content: "";
+        display: block;
+        text-align: center;
+        width: calc(var(--size) / 2 + 1px);
+        aspect-ratio: 1 / 2;
+        border-radius: calc(var(--size) * 2) 0 0 calc(var(--size) * 2);
+        background-color: var(--fg-color);
+    }
+}
 
 main {
-    /* text-wrap: balance; */
+    text-wrap: balance;
     p, ul {
         font-size: var(--fs-body);
         line-height: 175%;
@@ -71,7 +107,5 @@ main {
             word-wrap: break-word;
             line-height: 80%;
         }
-        /* background-color: var(--fg-color);
-        color: var(--bg-color); */
     }
 }

@@ -13,6 +13,11 @@ html {
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    &[data-theme="dark"] {
+        .js-cursor {
+            --bg-color: var(--fg-color);
+        }
+    }
 }
 
 body {
@@ -31,13 +36,13 @@ ul {
 a {
     color: var(--accent-color);
     text-decoration: none;
-    &:hover {
+    /* &:hover {
         color: var(--accent-color-hover);
-    }
+    } */
 }
 
 .js-cursor {
-	--size: 40px;
+	--size: 30px;
 	display: none;
 	position: fixed;
 	will-change: transform;
@@ -47,21 +52,31 @@ a {
 	border-radius: 50%;
 	background-color: var(--bg-color);
 	transform: translate(var(--cursor-x, calc(var(--size) / 2 * -1)), var(--cursor-y, calc(var(--size) / 2 * -1))) translateZ(0) scale(1);
+    transition: background-color 250ms;
 	transform-origin: center center;
 	pointer-events: none;
     mix-blend-mode: difference;
 	/* &.is-clicked {
-        background-color: var(--accent-color);
 	} */
     &.is-hover {
-        --size: 20px;
+        background-color: color-mix(
+            in srgb, var(--bg-color) 20%, transparent
+          );
     }
 	&.is-hidden {
-		opacity: 0;
+        display: none;
 	}
+    @media (pointer: fine) {
+        display: block;
+    }
 }
-@media (pointer: fine) {
-	.js-cursor {
-		display: block;
-	}
+
+.visually-hidden:not(:focus):not(:active) {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0); /* for IE only */
+    clip-path: inset(50%);
+    position: absolute;
+    white-space: nowrap;
 }

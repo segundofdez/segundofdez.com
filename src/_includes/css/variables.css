@@ -1,18 +1,35 @@
 :root {
-  --bg-color: hsl(0, 0%, 100%);
-  /* --bg-color: hsl(0, 70%, 50%); */
-  --fg-color: hsl(0, 0%, 5%);
-  --fg-color-light: color-mix(
-    in srgb, var(--fg-color) 10%, transparent
-  );
-  --accent-color: var(--fg-color);
-  --accent-color-hover: color-mix(
-    in srgb, var(--fg-color) 60%, transparent
-  );
+  &[data-theme="light"] {
+    color-scheme: light;
+    --bg-color: hsl(0, 0%, 100%);
+    --fg-color: hsl(0, 0%, 5%);
+    --fg-color-light: color-mix(
+      in srgb, var(--fg-color) 10%, transparent
+    );
+    --accent-color: var(--fg-color);
+    --accent-color-hover: color-mix(
+      in srgb, var(--fg-color) 60%, transparent
+    );
+  }
+  &[data-theme="dark"] {
+    color-scheme: dark;
+    --fg-color: hsl(0, 0%, 90%);
+    /* --bg-color: hsl(0, 70%, 50%); */
+    --bg-color: hsl(0, 0%, 12%);
+    --fg-color-light: color-mix(
+      in srgb, var(--fg-color) 10%, transparent
+    );
+    --accent-color: var(--fg-color);
+    --accent-color-hover: color-mix(
+      in srgb, var(--fg-color) 60%, transparent
+    );
+  }
 
   --fs-body: 1rem;
 
   --margin: 1rem;
+
+  --ly-gap: calc(var(--margin) * 2)
 }
 
 @custom-media --mobile (min-width: 320px);

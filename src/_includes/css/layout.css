@@ -8,7 +8,7 @@
     @media (--for-mobile-landscape-up) {
         grid-template-columns: var(--margin) repeat(3, minmax(var(--margin), 13rem)) 1fr;
         grid-template-rows: var(--margin) repeat(3, auto)  1fr var(--margin);
-        column-gap: calc(var(--margin) * 2);
+        column-gap: var(--ly-gap);
     }
     @media (--for-desktop-up) {
         grid-template-rows: var(--margin) auto  1fr auto minmax(12rem, 100%) var(--margin);

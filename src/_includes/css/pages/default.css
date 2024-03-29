@@ -33,6 +33,9 @@ header,
 }
 .theme-toggle {
     --size: 20px;
+    position: absolute;
+    bottom: var(--margin);
+    right: var(--margin);
     background-color: var(--bg-color);
     border: none;
     outline: 1px solid var(--fg-color);
@@ -41,7 +44,6 @@ header,
     border-radius: 50%;
     transition: outline 125ms;
     @media (--for-mobile-landscape-up) {
-        position: absolute;
         left: calc(var(--margin) + var(--ly-gap));
         top: var(--margin);
     }
@@ -100,11 +102,13 @@ main {
 
 .projects {
     @media (--for-desktop-up) {
+        height: 100vh;
+        overflow-y: scroll;
         border: none;
         padding: var(--margin);
         .title {
-            font-size: clamp(2rem, 8vw, 20rem);
             word-wrap: break-word;
+            font-size: var(--fs-title);
             line-height: 80%;
         }
     }

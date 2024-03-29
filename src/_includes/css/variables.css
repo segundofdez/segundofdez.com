@@ -4,11 +4,11 @@
     --bg-color: hsl(0, 0%, 100%);
     --fg-color: hsl(0, 0%, 5%);
     --fg-color-light: color-mix(
-      in srgb, var(--fg-color) 10%, transparent
+      in srgb, var(--fg-color) 10%, var(--bg-color)
     );
     --accent-color: var(--fg-color);
     --accent-color-hover: color-mix(
-      in srgb, var(--fg-color) 60%, transparent
+      in srgb, var(--fg-color) 60%, var(--bg-color)
     );
   }
   &[data-theme="dark"] {
@@ -17,15 +17,17 @@
     /* --bg-color: hsl(0, 70%, 50%); */
     --bg-color: hsl(0, 0%, 12%);
     --fg-color-light: color-mix(
-      in srgb, var(--fg-color) 10%, transparent
+      in srgb, var(--fg-color) 10%, var(--bg-color)
     );
     --accent-color: var(--fg-color);
     --accent-color-hover: color-mix(
-      in srgb, var(--fg-color) 60%, transparent
+      in srgb, var(--fg-color) 60%, var(--bg-color)
     );
   }
 
   --fs-body: 1rem;
+
+  --fs-title: clamp(2rem, 7vw, 20rem);
 
   --margin: 1rem;
 

@@ -1,0 +1,39 @@
+.keyboard,
+.keyboard button,
+.keyboard span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard {
+    flex-wrap: wrap;
+    gap: var(--margin);
+    margin-block: calc(var(--margin) * 2);
+    li {
+        flex: 1 0 calc(20% - var(--margin));
+    }
+    button {
+        width: 100%;
+        aspect-ratio: 1;
+        border: none;
+        background-color: transparent;
+        color: var(--fg-color-light);
+        span {
+            width: 100%;
+            aspect-ratio: 1;
+            font-size: 2rem;
+            border: 1px solid var(--fg-color-light);
+            background-color: var(--bg-color);
+            color: var(--fg-color);
+            border-radius: 10px;
+            transition: background-color 250ms, color 250ms;
+        }
+        &.is-active {
+            span {
+                background-color: var(--fg-color);
+                color: var(--bg-color);
+            }
+        }
+    }
+}

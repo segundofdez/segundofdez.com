@@ -1,18 +1,9 @@
-.keyboard,
-.keyboard button,
-.keyboard span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .keyboard {
-    flex-wrap: wrap;
-    gap: var(--margin);
-    margin-block: calc(var(--margin) * 2);
-    li {
-        flex: 1 0 calc(20% - var(--margin));
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--margin) * 4), 1fr));
+    gap: calc(var(--margin) / 2);
+    margin-block: calc(var(--margin) * 3);
     button {
         width: 100%;
         aspect-ratio: 1;
@@ -20,9 +11,12 @@
         background-color: transparent;
         color: var(--fg-color-light);
         span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             aspect-ratio: 1;
-            font-size: 2rem;
+            font-size: 1rem;
             border: 1px solid var(--fg-color-light);
             background-color: var(--bg-color);
             color: var(--fg-color);

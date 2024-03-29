@@ -110,6 +110,15 @@ main {
             word-wrap: break-word;
             font-size: var(--fs-title);
             line-height: 80%;
+            max-width: 10ch;
+            & + p {
+                max-width: 50ch;
+                hyphens: auto;
+                margin-top: 3rem;
+                font-size: clamp(1rem, 2vw, 2rem);
+                line-height: 135%;
+                font-weight: 400;
+            }
         }
     }
 }

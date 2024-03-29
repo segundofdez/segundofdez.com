@@ -4,11 +4,7 @@ const keySoundMap = {
     '3': 'sound3.mp3',
     '4': 'sound4.mp3',
     '5': 'sound5.mp3',
-    '6': 'sound6.mp3',
-    '7': 'sound7.mp3',
-    '8': 'sound8.mp3',
-    '9': 'sound9.mp3',
-    '0': 'sound10.mp3'
+    '6': 'sound6.mp3'
 };
 
 function playSound(sound) {
@@ -17,7 +13,8 @@ function playSound(sound) {
 }
 
 export function setupSoundEvents() {
-    for (let i = 0; i <= 9; i++) {
+    
+    for (let i = 0; i <= 5; i++) {
         const button = document.getElementById(`button${i}`);
         // button.addEventListener('mousedown', function() {
         //     const key = this.textContent;

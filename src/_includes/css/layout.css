@@ -6,12 +6,12 @@
     /* row-gap: var(--margin); */
 
     @media (--for-mobile-landscape-up) {
-        grid-template-columns: var(--margin) repeat(3, minmax(var(--margin), 13rem)) 1fr;
+        grid-template-columns: var(--margin) repeat(3, minmax(var(--margin), var(--ly-column-w))) 1fr;
         grid-template-rows: var(--margin) repeat(3, auto)  1fr var(--margin);
         column-gap: var(--ly-gap);
     }
     @media (--for-desktop-up) {
-        grid-template-rows: var(--margin) auto  1fr auto minmax(12rem, 100%) var(--margin);
+        grid-template-rows: var(--margin) auto  1fr auto minmax(var(--ly-column-h), 100%) var(--margin);
     }
 
     header,
@@ -105,7 +105,7 @@
     }
 
     .projects {
-        --ofsset: calc(12rem * 4 - var(--ly-gap));
+        --ofsset: calc(var(--margin) + var(--ly-gap) * 3 + var(--ly-column-w) * 3);
         @media (--for-mobile-landscape-up) {
             grid-row: 2 / 5;
         }

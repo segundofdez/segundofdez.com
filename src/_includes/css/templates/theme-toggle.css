@@ -1,0 +1,37 @@
+.theme-toggle {
+    --size: 20px;
+    position: absolute;
+    width: var(--size);
+    aspect-ratio: 1;
+    bottom: var(--margin);
+    right: var(--margin);
+    background-color: var(--bg-color);
+    outline: 1px solid var(--fg-color);
+    border: none;
+    border-radius: 50%;
+    transition: outline 125ms;
+    @media (--for-mobile-landscape-up) {
+        left: calc(var(--margin) + var(--ly-gap));
+        top: var(--margin);
+    }
+    &:hover {
+        outline: 7px solid var(--fg-color);
+    }
+    &[datha-theme="dark"] {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: calc(var(--size) / 2 + 1px);
+        aspect-ratio: 1 / 2;
+        left: -1px;
+        top: -1px;
+        text-align: center;
+        border-radius: calc(var(--size) * 2) 0 0 calc(var(--size) * 2);
+        background-color: var(--fg-color);
+    }
+}

@@ -1,0 +1,29 @@
+.js-cursor {
+	--size: 30px;
+	display: none;
+	position: fixed;
+	will-change: transform;
+	z-index: 9999;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	background-color: var(--bg-color);
+	transform: translate(var(--cursor-x, calc(var(--size) / 2 * -1)), var(--cursor-y, calc(var(--size) / 2 * -1))) translateZ(0) scale(1);
+    transition: background-color 250ms;
+	transform-origin: center center;
+	pointer-events: none;
+    mix-blend-mode: difference;
+	/* &.is-clicked {
+	} */
+    &.is-hover {
+        background-color: color-mix(
+            in srgb, var(--bg-color) 20%, transparent
+          );
+    }
+	&.is-hidden {
+        display: none;
+	}
+    @media (pointer: fine) {
+        display: block;
+    }
+}

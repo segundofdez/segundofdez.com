@@ -1,22 +1,25 @@
 
 .keyboard-content {
     --br: 14px;
-    display: inline-flex;
     padding: calc(var(--margin) / 1.5);
     border-radius: calc(var(--br) + calc(var(--margin) / 1.5));
     border: 1px solid var(--fg-color-light);
+    @media (--for-desktop-up) {
+        display: inline-flex;
+    }
 }
 .keyboard {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(calc(var(--margin) * 3), 1fr));
     gap: calc(var(--margin) / 1.5);
     padding: calc(var(--margin) / 1.5);
-    border-radius: var(--br) 0 0 var(--br);
+    border-radius: var(--br) var(--br) 0 0;
     background-color: var(--fg-color-light);
 
     @media (--for-desktop-up) {
         display: inline-grid;
         grid-template-columns: repeat(3, minmax(calc(var(--margin) * 3.75), 1fr));
+        border-radius: var(--br) 0 0 var(--br);
     }
     button {
         width: 100%;
@@ -46,7 +49,7 @@
     padding: calc(var(--margin) / 1.5) var(--margin);
     counter-reset: keyboard-counter;
     border: 1px solid var(--fg-color-light);
-    border-radius: 0 var(--br) var(--br) 0;
+    border-radius: 0 0 var(--br) var(--br);
     column-count: 2;
     column-gap: 0;
     li {
@@ -67,5 +70,8 @@
             border-radius: 4px;
             margin-right: calc(var(--margin) / 2);
           }
+    }
+    @media (--for-desktop-up) {
+        border-radius: 0 var(--br) var(--br) 0;
     }
 }

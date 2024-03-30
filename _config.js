@@ -16,6 +16,7 @@ const site = lume({
 });
 
 site
+    .copy("static", ".")
     .use(postcss({
         plugins: [
             postcssCustomMedia(),

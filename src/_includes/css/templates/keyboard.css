@@ -1,33 +1,33 @@
 
 .keyboard {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(var(--margin) * 4), 1fr));
-    gap: calc(var(--margin) / 2);
-    margin-block: calc(var(--margin) * 3);
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--margin) * 3), 1fr));
+    gap: calc(var(--margin) / 1.5);
+    padding: calc(var(--margin) / 1.5);
+    border-radius: 14px;
+    background-color: var(--fg-color-light);
+
+    @media (--for-desktop-up) {
+        display: inline-grid;
+        grid-template-columns: repeat(3, minmax(calc(var(--margin) * 3.75), 1fr));
+    }
     button {
         width: 100%;
         aspect-ratio: 1;
         border: none;
-        background-color: transparent;
-        color: var(--fg-color-light);
+        background-color: var(--bg-color);
+        color: var(--fg-color);
+        border-radius: 8px;
+        transition: background-color 250ms, color 250ms;
         span {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            aspect-ratio: 1;
             font-size: 1rem;
-            border: 1px solid var(--fg-color-light);
-            background-color: var(--bg-color);
-            color: var(--fg-color);
-            border-radius: 10px;
-            transition: background-color 250ms, color 250ms;
         }
         &.is-active {
-            span {
-                background-color: var(--fg-color);
-                color: var(--bg-color);
-            }
+            background-color: var(--fg-color);
+            color: var(--bg-color);
         }
     }
 }

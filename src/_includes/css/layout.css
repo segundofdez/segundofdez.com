@@ -105,7 +105,7 @@
     }
 
     .projects {
-        --ofsset: 737px;
+        --ofsset: calc(12rem * 4 - var(--ly-gap));
         @media (--for-mobile-landscape-up) {
             grid-row: 2 / 5;
         }

@@ -31,6 +31,7 @@ header,
         }
     }
 }
+
 .theme-toggle {
     --size: 20px;
     position: absolute;
@@ -70,7 +71,6 @@ header,
 }
 
 main {
-    text-wrap: balance;
     p, ul {
         font-size: var(--fs-body);
         line-height: 175%;
@@ -86,8 +86,9 @@ main {
     font-weight: 500;
     margin: 0;
 }
+
 .logo {
-    font-size: 2rem;
+    font-size: var(--fs-body-m);
 }
 
 .description {
@@ -101,23 +102,33 @@ main {
 }
 
 .projects {
+    .title {
+        font-size: var(--fs-body-m);
+        word-wrap: break-word;
+        text-wrap: auto;
+        hyphens: none;
+        margin-block: calc(var(--margin) * 2);
+        & + p {
+            max-width: 45ch;
+            text-wrap: auto;
+            hyphens: auto;
+            font-weight: 400;
+        }
+    }
     @media (--for-desktop-up) {
         height: 100vh;
         overflow-y: scroll;
         border: none;
-        padding: var(--margin);
+        padding: 1rem 2rem;
         .title {
-            word-wrap: break-word;
+            max-width: 9ch;
+            margin-top: 0;
             font-size: var(--fs-title);
-            line-height: 80%;
-            max-width: 10ch;
+            line-height: 90%;
             & + p {
-                max-width: 50ch;
-                hyphens: auto;
-                margin-top: 3rem;
-                font-size: clamp(1rem, 2vw, 2rem);
-                line-height: 135%;
-                font-weight: 400;
+                margin-top: 2.5rem;
+                font-size: clamp(1rem, 1.75vw, 2rem);
+                line-height: 130%;
             }
         }
     }

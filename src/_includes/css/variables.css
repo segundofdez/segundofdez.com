@@ -14,7 +14,6 @@
   &[data-theme="dark"] {
     color-scheme: dark;
     --fg-color: hsl(0, 0%, 90%);
-    /* --bg-color: hsl(0, 70%, 50%); */
     --bg-color: hsl(0, 0%, 12%);
     --fg-color-light: color-mix(
       in srgb, var(--fg-color) 10%, var(--bg-color)
@@ -26,8 +25,8 @@
   }
 
   --fs-body: 1rem;
-
-  --fs-title: clamp(2rem, 8vw, 8rem);
+  --fs-body-m: 2rem;
+  --fs-title: clamp(2rem, 6vw, 8rem);
 
   --margin: 1rem;
 

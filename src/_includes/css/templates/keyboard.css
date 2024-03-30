@@ -3,7 +3,7 @@
     --br: 14px;
     display: inline-flex;
     padding: calc(var(--margin) / 1.5);
-    border-radius: calc(var(--br) * 1.55);
+    border-radius: calc(var(--br) + calc(var(--margin) / 1.5));
     border: 1px solid var(--fg-color-light);
 }
 .keyboard {
@@ -24,7 +24,7 @@
         border: none;
         background-color: var(--bg-color);
         color: var(--fg-color);
-        border-radius: 8px;
+        border-radius: calc(var(--br) -  var(--margin) / 2);
         transition: background-color 250ms, color 250ms;
         span {
             display: flex;

@@ -33,7 +33,7 @@ header,
 main {
     p{
         font-size: var(--fs-body);
-        line-height: 155%;
+        line-height: 160%;
         text-wrap: auto;
         hyphens: auto;
     }

@@ -5,7 +5,7 @@ import postcssCustomMedia from "npm:postcss-custom-media@9.1.2";
 import multilanguage from "lume/plugins/multilanguage.ts";
 import favicon from "lume/plugins/favicon.ts";
 import esbuild from "lume/plugins/esbuild.ts";
-
+import transformImages from "lume/plugins/transform_images.ts";
 
 const site = lume({
     src: "./src",
@@ -16,6 +16,9 @@ const site = lume({
 });
 
 site
+    .use(transformImages({
+        cache: false,
+    }))
     .copy("static", ".")
     .use(postcss({
         plugins: [
@@ -24,15 +27,13 @@ site
         keepDefaultPlugins: true,
     }))
     .use(multilanguage({
-        languages: ["gl", "es", "en"], // Available languages
-        defaultLanguage: "gl", // Optional: A prefix-free language
+        languages: ["gl", "es", "en"],
+        defaultLanguage: "gl",
     }))
     .use(favicon({
         input: "/favicon.svg",
     }))
-    .use(esbuild({
-        // Your esbuild options here
-    })
+    .use(esbuild({})
 );
 
 site.use(basePath());

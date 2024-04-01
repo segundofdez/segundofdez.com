@@ -1,11 +1,11 @@
 // Objeto que mapea cada número con su archivo de sonido correspondiente
 const keySoundMap = {
-    '1': 'audio/01.wav',
-    '2': 'audio/02.wav',
-    '3': 'audio/03.wav',
-    '4': 'audio/04.wav',
-    '5': 'audio/05.wav',
-    '6': 'audio/06.wav'
+    '1': '/audio/01.wav',
+    '2': '/audio/02.wav',
+    '3': '/audio/03.wav',
+    '4': '/audio/04.wav',
+    '5': '/audio/05.wav',
+    '6': '/audio/06.wav'
 };
 
 // Objeto que almacenará los objetos de audio activos

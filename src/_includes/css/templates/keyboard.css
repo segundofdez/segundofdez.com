@@ -51,6 +51,7 @@
     border: 1px solid var(--fg-color-light);
     border-radius: 0 0 var(--br) var(--br);
     column-count: 2;
+    background-color: var(--bg-color);
     column-gap: 0;
     li {
         font-size: var(--fs-caption);

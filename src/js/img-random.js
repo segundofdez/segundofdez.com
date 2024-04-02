@@ -47,8 +47,8 @@ function randomizeImages() {
     let el = document.querySelector('.keyboard-content');
     let rect = el.getBoundingClientRect();
     let docEl = document.documentElement;
-    let left = rect.left + window.pageXOffset - docEl.clientLeft;
-    let top = rect.top + window.pageYOffset - docEl.clientTop;
+    let left = rect.left + window.scrollX - docEl.clientLeft;
+    let top = rect.top + window.scrollY - docEl.clientTop;
     excludedElement = { left: left, top: top, width: rect.width, height: rect.height };
 
     // Coloca las imágenes en posiciones aleatorias

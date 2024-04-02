@@ -1,4 +1,3 @@
-// Objeto que mapea cada número con su archivo de sonido correspondiente
 const keySoundMap = {
     '1': '/audio/01.wav',
     '2': '/audio/02.wav',
@@ -35,10 +34,22 @@ function handleButtonClick(event) {
     button.classList.toggle('is-active');
     if (button.classList.contains('is-active')) {
         activeAudio[key] = playSound(sound);
+        const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+        if (img) {
+            img.style.opacity = 1;
+            img.style.zIndex = ++zIndexCounter; // Incrementa el contador y úsalo como zIndex
+        }
     } else {
         stopAndRemoveAudio(key);
+        const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+        if (img) {
+            img.style.opacity = .1;
+            img.style.zIndex = -1;
+        }
     }
 }
+
+let zIndexCounter = 0;
 
 function handleKeyPress(event) {
     const key = event.key;
@@ -48,12 +59,21 @@ function handleKeyPress(event) {
         button.classList.toggle('is-active');
         if (button.classList.contains('is-active')) {
             activeAudio[key] = playSound(sound);
+            const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+            if (img) {
+                img.style.opacity = 1;
+                img.style.zIndex = ++zIndexCounter; // Incrementa el contador como zIndex
+            }
         } else {
             stopAndRemoveAudio(key);
+            const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+            if (img) {
+                img.style.opacity = .1;
+                img.style.zIndex = -1;
+            }
         }
     }
 }
-
 export function setupButtonEvents() {
     const buttons = document.querySelectorAll('.keyboard button');
     buttons.forEach(button => {

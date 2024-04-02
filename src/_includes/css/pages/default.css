@@ -101,6 +101,7 @@ img {
     opacity: .1;
     z-index: -1;
     transition: opacity 250ms;
-    aspect-ratio: 16/10;
+    aspect-ratio: 3/2;
     object-fit: cover;
+    width: 300px;
 }

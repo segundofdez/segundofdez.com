@@ -66,11 +66,11 @@ function randomizeImages() {
         document.body.append(img);
     });
 
-    // Si la imagen es 'img-1', establece su fuente a una imagen aleatoria de la carpeta 01
+    // Si la imagen es 'img-1', imagen aleatoria de la carpeta 01
     const img1 = document.getElementById('img-5');
     if (img1) {
-        const randomNum = Math.floor(Math.random() * 3) + 1;
-        img1.src = `/img/keyboard/01/0${randomNum}-xs.webp`;
+        const randomNum = Math.floor(Math.random() * 3) + 1; // imgs
+        img1.src = `/img/keyboard/05/0${randomNum}-s.webp`;
     }
 }
 

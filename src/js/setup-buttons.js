@@ -41,7 +41,7 @@ function handleButtonClick(event) {
         }
     } else {
         stopAndRemoveAudio(key);
-        const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+        const img = document.getElementById(`img-${key}`);
         if (img) {
             img.style.opacity = .1;
             img.style.zIndex = -1;
@@ -59,14 +59,14 @@ function handleKeyPress(event) {
         button.classList.toggle('is-active');
         if (button.classList.contains('is-active')) {
             activeAudio[key] = playSound(sound);
-            const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+            const img = document.getElementById(`img-${key}`);
             if (img) {
                 img.style.opacity = 1;
-                img.style.zIndex = ++zIndexCounter; // Incrementa el contador como zIndex
+                img.style.zIndex = ++zIndexCounter;
             }
         } else {
             stopAndRemoveAudio(key);
-            const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
+            const img = document.getElementById(`img-${key}`);
             if (img) {
                 img.style.opacity = .1;
                 img.style.zIndex = -1;

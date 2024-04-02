@@ -33,7 +33,7 @@
   --fs-caption: .875rem;
   --fs-body: 1rem;
   --fs-body-m: 2rem;
-  --fs-title: clamp(2rem, 6vw, 8rem);
+  --fs-title: clamp(2rem, 6vw, 6rem);
 
   --margin: 1rem;
 

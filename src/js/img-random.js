@@ -57,8 +57,10 @@ function randomizeImages() {
     images.forEach((img, index) => {
         img.onload = function() {
             let pos = getRandomPosition(img);
-            img.style.right = ((document.documentElement.clientWidth - pos.left - img.offsetWidth) / document.documentElement.clientWidth * 100) + "%";
-            img.style.bottom = ((document.documentElement.clientHeight - pos.top - img.offsetHeight) / document.documentElement.clientHeight * 100) + "%";
+            let right = ((document.documentElement.clientWidth - pos.left - img.offsetWidth) / document.documentElement.clientWidth * 100);
+            let bottom = ((document.documentElement.clientHeight - pos.top - img.offsetHeight) / document.documentElement.clientHeight * 100);
+            img.style.right = Math.round(right) + "%";
+            img.style.bottom = Math.round(bottom) + "%";
         }
         if (img.complete) {
             img.onload();

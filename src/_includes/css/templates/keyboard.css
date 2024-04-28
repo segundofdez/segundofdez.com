@@ -1,9 +1,12 @@
 
 .keyboard-content {
+    position: relative;
+    z-index: 9999;
     --br: 14px;
     padding: calc(var(--margin) / 1.5);
     border-radius: calc(var(--br) + calc(var(--margin) / 1.5));
     border: 1px solid var(--fg-color-light);
+    background-color: var(--bg-color);
     @media (--for-desktop-up) {
         display: inline-flex;
     }

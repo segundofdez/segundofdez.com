@@ -37,7 +37,7 @@ function handleButtonClick(event) {
         const img = document.getElementById(`img-${key}`); // Los ID de las imágenes comienzan en 1
         if (img) {
             img.style.opacity = 1;
-            img.style.zIndex = ++zIndexCounter; // Incrementa el contador y úsalo como zIndex
+            img.style.zIndex = ++zIndexCounter; // Incrementa el contador y usar como zIndex
         }
     } else {
         stopAndRemoveAudio(key);
@@ -63,6 +63,8 @@ function handleKeyPress(event) {
             if (img) {
                 img.style.opacity = 1;
                 img.style.zIndex = ++zIndexCounter;
+                const randomNum = Math.floor(Math.random() * 4) + 1; // Asume que hay 4 imágenes en cada carpeta
+                img.src = `/img/keyboard/0${key}/0${randomNum}-s.webp`; // Carga una imagen aleatoria de la carpeta correspondiente
             }
         } else {
             stopAndRemoveAudio(key);
@@ -77,7 +79,28 @@ function handleKeyPress(event) {
 export function setupButtonEvents() {
     const buttons = document.querySelectorAll('.keyboard button');
     buttons.forEach(button => {
-        button.addEventListener('click', handleButtonClick);
+        button.addEventListener('click', () => {
+            const key = button.id.replace('button', '');
+            const sound = keySoundMap[key];
+            button.classList.toggle('is-active');
+            if (button.classList.contains('is-active')) {
+                activeAudio[key] = playSound(sound);
+                const img = document.getElementById(`img-${key}`);
+                if (img) {
+                    img.style.opacity = 1;
+                    img.style.zIndex = ++zIndexCounter;
+                    const randomNum = Math.floor(Math.random() * 4) + 1; // Asume que hay 4 imágenes en cada carpeta
+                    img.src = `/img/keyboard/0${key}/0${randomNum}-s.webp`; // Carga una imagen aleatoria de la carpeta correspondiente
+                }
+            } else {
+                stopAndRemoveAudio(key);
+                const img = document.getElementById(`img-${key}`);
+                if (img) {
+                    img.style.opacity = .1;
+                    img.style.zIndex = -1;
+                }
+            }
+        });
     });
 
     document.addEventListener('keydown', handleKeyPress);

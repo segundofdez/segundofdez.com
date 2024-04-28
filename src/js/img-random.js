@@ -68,10 +68,10 @@ function randomizeImages() {
         document.body.append(img);
     });
 
-    // Si la imagen es 'img-1', imagen aleatoria de la carpeta 01
+    // Si la imagen es 'img-1', imagen aleatoria de la carpeta
     const img1 = document.getElementById('img-5');
     if (img1) {
-        const randomNum = Math.floor(Math.random() * 3) + 1; // imgs
+        const randomNum = Math.floor(Math.random() * 4) + 1; // imgs
         img1.src = `/img/keyboard/05/0${randomNum}-s.webp`;
     }
 }

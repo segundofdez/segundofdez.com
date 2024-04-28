@@ -103,5 +103,6 @@ img {
     transition: opacity 250ms;
     aspect-ratio: 3/2;
     object-fit: cover;
-    width: 300px;
+    width: auto;
+    max-width: 400px;
 }

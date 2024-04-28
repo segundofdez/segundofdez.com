@@ -1,7 +1,7 @@
 let positions = [];
 let excludedElement;
 let totalImageArea = 0;
-const MAX_ATTEMPTS = 1000;
+const MAX_ATTEMPTS = 2000;
 
 function getRandomPosition(img) {
     let overlap = false;

@@ -50,11 +50,20 @@ function handleButtonClick(event) {
 }
 
 let zIndexCounter = 0;
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
+const description = document.querySelector('.description');
 
 function handleKeyPress(event) {
     const key = event.key;
     const sound = keySoundMap[key];
     const button = document.getElementById(`button${key}`);
+
+    // Si se presiona la tecla Esc, detén todo y regresa
+    if (key === 'Escape') {
+        stopAll();
+        return;
+    }
     if (button) {
         button.classList.toggle('is-active');
         if (button.classList.contains('is-active')) {
@@ -66,6 +75,11 @@ function handleKeyPress(event) {
                 const randomNum = Math.floor(Math.random() * 4) + 1; // Asume que hay 4 imágenes en cada carpeta
                 img.src = `/img/keyboard/0${key}/0${randomNum}-s.webp`; // Carga una imagen aleatoria de la carpeta correspondiente
             }
+
+            // Oculta el header y el footer
+            // header.classList.add('visually-hidden');
+            // footer.classList.add('visually-hidden');
+            // description.classList.add('visually-hidden');
         } else {
             stopAndRemoveAudio(key);
             const img = document.getElementById(`img-${key}`);
@@ -73,11 +87,49 @@ function handleKeyPress(event) {
                 img.style.opacity = .1;
                 img.style.zIndex = -1;
             }
+
+            // Si no hay botones activos, muestra el header y el footer
+            const buttons = document.querySelectorAll('.keyboard button');
+            // if (!Array.from(buttons).some(button => button.classList.contains('is-active'))) {
+            //     header.classList.remove('visually-hidden');
+            //     footer.classList.remove('visually-hidden');
+            //     description.classList.remove('visually-hidden');
+            // }
         }
     }
 }
+
+function stopAll() {
+    // Detén todos los audios activos
+    for (let key in activeAudio) {
+        stopAndRemoveAudio(key);
+    }
+
+    // Restablece la opacidad y el zIndex de todas las imágenes
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.style.opacity = .1;
+        img.style.zIndex = -1;
+    });
+
+    // Quita la clase 'is-active' de todos los botones
+    const buttons = document.querySelectorAll('.keyboard button');
+    buttons.forEach(button => {
+        button.classList.remove('is-active');
+    });
+
+    // Muestra el header, el footer y la descripción
+    // header.classList.remove('visually-hidden');
+    // footer.classList.remove('visually-hidden');
+    // description.classList.remove('visually-hidden');
+}
+
 export function setupButtonEvents() {
     const buttons = document.querySelectorAll('.keyboard button');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const description = document.querySelector('.description');
+
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const key = button.id.replace('button', '');
@@ -92,6 +144,11 @@ export function setupButtonEvents() {
                     const randomNum = Math.floor(Math.random() * 4) + 1; // Asume que hay 4 imágenes en cada carpeta
                     img.src = `/img/keyboard/0${key}/0${randomNum}-s.webp`; // Carga una imagen aleatoria de la carpeta correspondiente
                 }
+
+                // Oculta el header y el footer
+                // header.classList.add('visually-hidden');
+                // footer.classList.add('visually-hidden');
+                // description.classList.add('visually-hidden');
             } else {
                 stopAndRemoveAudio(key);
                 const img = document.getElementById(`img-${key}`);
@@ -99,6 +156,13 @@ export function setupButtonEvents() {
                     img.style.opacity = .1;
                     img.style.zIndex = -1;
                 }
+
+                // Si no hay botones activos, muestra el header y el footer
+                // if (!Array.from(buttons).some(button => button.classList.contains('is-active'))) {
+                //     header.classList.remove('visually-hidden');
+                //     footer.classList.remove('visually-hidden');
+                //     description.classList.remove('visually-hidden');
+                // }
             }
         });
     });

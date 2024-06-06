@@ -43,7 +43,7 @@ function handleButtonClick(event) {
         stopAndRemoveAudio(key);
         const img = document.getElementById(`img-${key}`);
         if (img) {
-            img.style.opacity = .1;
+            img.style.opacity = 0;
             img.style.zIndex = -1;
         }
     }
@@ -84,7 +84,7 @@ function handleKeyPress(event) {
             stopAndRemoveAudio(key);
             const img = document.getElementById(`img-${key}`);
             if (img) {
-                img.style.opacity = .1;
+                img.style.opacity = 0;
                 img.style.zIndex = -1;
             }
 
@@ -108,7 +108,7 @@ function stopAll() {
     // Restablece la opacidad y el zIndex de todas las imágenes
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.style.opacity = .1;
+        img.style.opacity = 0;
         img.style.zIndex = -1;
     });
 
@@ -153,7 +153,7 @@ export function setupButtonEvents() {
                 stopAndRemoveAudio(key);
                 const img = document.getElementById(`img-${key}`);
                 if (img) {
-                    img.style.opacity = .1;
+                    img.style.opacity = 0;
                     img.style.zIndex = -1;
                 }
 

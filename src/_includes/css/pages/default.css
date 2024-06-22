@@ -44,7 +44,7 @@ main {
 }
 
 .title {
-    font-size: var(--fs-body-m);
+    font-size: var(--fs-body);
     line-height: 90%;
     font-weight: 500;
     margin: 0;
@@ -53,12 +53,12 @@ main {
     hyphens: none;
 
     @media (--for-desktop-up) {
-        font-size: var(--fs-title);
+        font-size: var(--fs-body);
     }
 }
 
 .logo {
-    font-size: var(--fs-body-m);
+    font-size: var(--fs-body);
 }
 
 .description {
@@ -85,24 +85,28 @@ main {
         border: none;
         padding: var(--margin) calc(var(--margin) * 2);
         .title {
-            margin: 0;
-            max-width: 9ch;
+            margin-block-start: 0;
+            margin-block-end: calc(var(--margin) * 4);
+            /* max-width: 9ch; */
         }
         p {
-            font-size: clamp(1rem, 1.75vw, 2rem);
+            /* font-size: clamp(1rem, 1.75vw, 2rem); */
             line-height: 130%;
-            max-width: 45ch;
+            max-width: 52ch;
         }
     }
+}
+figure {
+    
 }
 img {
     /* display: none; */
     position: absolute;
     opacity: 0;
     z-index: -1;
-    /* transition: opacity 250ms; */
     aspect-ratio: 3/2;
     object-fit: cover;
     width: auto;
     max-width: 400px;
+    transition: opacity 400ms;
 }

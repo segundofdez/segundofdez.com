@@ -1,7 +1,7 @@
 
 .keyboard-content {
     position: relative;
-    z-index: 9999;
+    /* z-index: 9999; */
     --br: 14px;
     padding: calc(var(--margin) / 1.5);
     border-radius: calc(var(--br) + calc(var(--margin) / 1.5));
@@ -9,6 +9,7 @@
     background-color: var(--bg-color);
     @media (--for-desktop-up) {
         display: inline-flex;
+        margin-block-start: calc(var(--margin) * 3);
     }
 }
 .keyboard {

@@ -110,6 +110,7 @@ function stopAll() {
     images.forEach(img => {
         img.style.opacity = 0;
         img.style.zIndex = -1;
+        img.style.transition = 'opacity 400ms'; // Agrega la transición aquí
     });
 
     // Quita la clase 'is-active' de todos los botones

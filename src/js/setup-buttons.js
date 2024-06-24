@@ -77,7 +77,7 @@ function handleKeyPress(event) {
             if (isMuted[key]) {
                 activeAudio[key].muted = false;
                 isMuted[key] = false;
-            } 
+            }
             // Si el audio no está en silencio, lo silenciamos
             else {
                 activeAudio[key].muted = true;

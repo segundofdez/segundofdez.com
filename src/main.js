@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     setupButtonEvents();
     randomizeImages();
 
-
     Draggable.create("img", {
         bounds: "body",
+        cursor: "move",
     });
 });

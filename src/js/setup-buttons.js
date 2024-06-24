@@ -25,6 +25,8 @@ function stopAndRemoveAudio(key) {
         activeAudio[key].currentTime = 0;
         delete activeAudio[key];
     }
+
+    //si se pulsa la tecla m 0 M se pausa el audio
 }
 
 function handleButtonClick(event) {
@@ -54,6 +56,9 @@ const header = document.querySelector('header');
 const footer = document.querySelector('footer');
 const description = document.querySelector('.description');
 
+
+let isMuted = {};
+
 function handleKeyPress(event) {
     const key = event.key;
     const sound = keySoundMap[key];
@@ -64,6 +69,24 @@ function handleKeyPress(event) {
         stopAll();
         return;
     }
+    // Crear un objeto para almacenar el estado de silencio de cada audio
+
+    if (key === 'm' || key === 'M') {
+        for (let key in activeAudio) {
+            // Si el audio está actualmente en silencio, lo reanudamos
+            if (isMuted[key]) {
+                activeAudio[key].muted = false;
+                isMuted[key] = false;
+            } 
+            // Si el audio no está en silencio, lo silenciamos
+            else {
+                activeAudio[key].muted = true;
+                isMuted[key] = true;
+            }
+        }
+        return;
+    }
+
     if (button) {
         button.classList.toggle('is-active');
         if (button.classList.contains('is-active')) {
@@ -166,7 +189,7 @@ export function setupButtonEvents() {
                 // }
             }
         });
-    });
 
+    });
     document.addEventListener('keydown', handleKeyPress);
 }

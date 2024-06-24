@@ -155,7 +155,7 @@ export function setupButtonEvents() {
                 const img = document.getElementById(`img-${key}`);
                 if (img) {
                     img.style.opacity = 0;
-                    img.style.zIndex = -1;
+                    // img.style.zIndex = -1;
                 }
 
                 // Si no hay botones activos, muestra el header y el footer

@@ -1,0 +1,16 @@
+transformImages:
+- resize: [240]
+  suffix: -xs
+  format: webp
+
+- resize: [480]
+  suffix: -s
+  format: webp
+
+- resize: [1440]
+  suffix: -l
+  format: webp
+
+- resize: [2200]
+  suffix: -xl
+  format: webp

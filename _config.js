@@ -17,7 +17,7 @@ const site = lume({
 
 site
     .use(transformImages({
-        cache: false,
+        // cache: false,
     }))
     .copy("static", ".")
     .use(postcss({

@@ -1,9 +1,9 @@
 .theme-toggle {
-    --size: 20px;
+    --size: 21px;
     position: absolute;
     width: var(--size);
     aspect-ratio: 1;
-    bottom: var(--margin);
+    top: var(--margin);
     right: var(--margin);
     background-color: var(--bg-color);
     outline: 1px solid var(--fg-color);

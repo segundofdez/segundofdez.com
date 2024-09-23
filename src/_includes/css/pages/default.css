@@ -22,11 +22,15 @@ header,
 }
 
 .nav {
+    margin-right: calc(var(--margin) * 3);
     a {
         &[aria-current="page"] {
             color: var(--fg-color-medium);
             pointer-events: none;
         }
+    }
+    @media (--for-mobile-landscape-up) {
+        margin-right: 0;
     }
 }
 
@@ -130,11 +134,13 @@ main {
     img {
         width: 100%;
         vertical-align: middle;
+        margin-block: var(--margin);
         @media (--for-desktop-up) {
             width: 100vw;
             height: 100vh;
             object-fit: cover;
             object-position: center;
+            margin-block: 0;
         }
     }
 }

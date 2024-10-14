@@ -26,6 +26,7 @@ site
         ],
         keepDefaultPlugins: true,
     }))
+    site.use(basePath())
     .use(multilanguage({
         languages: ["gl", "es", "en"],
         defaultLanguage: "gl",
@@ -36,6 +37,5 @@ site
     .use(esbuild({})
 );
 
-site.use(basePath());
 
 export default site;

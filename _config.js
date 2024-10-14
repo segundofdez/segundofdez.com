@@ -26,7 +26,7 @@ site
         ],
         keepDefaultPlugins: true,
     }))
-    site.use(basePath())
+    .use(basePath())
     .use(multilanguage({
         languages: ["gl", "es", "en"],
         defaultLanguage: "gl",

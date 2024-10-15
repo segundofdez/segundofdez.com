@@ -11,7 +11,7 @@
         column-gap: var(--ly-gap);
     }
     @media (--for-desktop-up) {
-        grid-template-rows: var(--margin) auto  1fr auto minmax(var(--ly-column-h), 100%) var(--margin);
+        grid-template-rows: var(--margin) auto  1fr auto auto var(--margin);
     }
 
     header,
@@ -50,6 +50,7 @@
         @media (--for-desktop-up) {
             grid-column: 3 / 6;
             grid-row: 3 / 7;
+
         }
     }
 
@@ -86,9 +87,9 @@
                 justify-content: flex-start;
             }
         }
-        @media (--for-desktop-up) {
+        /* @media (--for-desktop-up) {
             padding-block-end: 0;
-        }
+        } */
     }
 
     .description,
@@ -101,6 +102,7 @@
     .description {
         @media (--for-desktop-up) {
             grid-row: 2 / 7;
+            align-self: end;
         }
     }
 
